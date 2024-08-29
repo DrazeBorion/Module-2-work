@@ -1,0 +1,63 @@
+body {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+  }
+/*ask about inline-flex vs flex, inline-block vs block, etc. does flex = flexbox? I see them both used separately*/
+  header {
+    display: flex;
+    min-height: 150px;
+    max-height: 150px;
+    justify-content: space-between;
+    align-items: right;
+    padding: 0%;
+    background-color: cyan;
+    background-image: linear-gradient(to right, rgb(179, 0, 146), rgb(255, 0, 0));
+    color:white;
+  }
+
+  /*how do I move this h1 slightly higher in the header box? Padding just lowers it*/
+  h1 {
+    font-size: 400%;
+    padding-left: 1%;
+    padding-bottom: 1%; /*does nothing AFAICS */
+  }
+
+  /*Ask Mark why this only occupies a small section of the Header even when it's set at min-width: 100% as opposed to the 100 (or 300)px it was originally*/
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 100px;
+    min-height: 110px;
+/*ask about better ways to align HREF links vertically within a nav ul li. Research said I need to create a div class for it? As is, its a very ad-hoc solution, I imagine. Probably won't adjust well to window sizes changing. */
+  }
+
+  main {
+    display: flex;
+    flex: 1 1 0;
+    max-width: 1200px;
+    margin: 2% auto;
+  }
+  
+  /* ask Mark about having stuff align to the left. I would need to change flex to something else entirely, or can just the numbers be changed? */
+  section {
+    flex: 1 1 0;
+    padding-right: 5%;
+  }
+
+  article {
+    border-bottom: 1px solid #d8a47f;
+  }
+
+  article p {
+    margin: 2% 0;
+    font-size: 110%;
+  }
+
+  #website-span {
+    position: relative;
+    text-decoration: underline;
+    color: #000;
+    cursor: grab;
+  }
